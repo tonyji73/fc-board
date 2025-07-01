@@ -1,0 +1,20 @@
+spring:
+    datasource:
+        url: jdbc:mysql://awseb-e-8ezuvparpg-stack-awsebrdsdatabase-k9brcklmewlr.clmsuvt265ah.ap-northeast-2.rds.amazonaws.com/board?useSSL=false&serverTimezone=Asia/Seoul
+        username: fastcam
+        password: 00000000a
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+                default_batch_fetch_size: 100
+            dialect: org.hibernate.dialect.MySQL8Dialect
+    cache:
+        type: redis
+        redis:
+            host: fc-board-redis-0001-001.4bjhyh.0001.apn2.cache.amazonaws.com
+            port: 6379
