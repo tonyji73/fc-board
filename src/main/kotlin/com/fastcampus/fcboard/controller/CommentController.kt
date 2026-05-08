@@ -21,6 +21,7 @@ class CommentController(
         @PathVariable postId: Long,
         @RequestBody commentCreateRequest: CommentCreateRequest,
     ): Long {
+        System.out.println("comment created!")
         return commentService.createComment(postId, commentCreateRequest.toDto())
     }
 
