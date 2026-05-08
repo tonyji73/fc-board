@@ -30,6 +30,8 @@ class CommentController(
         @PathVariable commentId: Long,
         @RequestBody commentUpdateRequest: CommentUpdateRequest,
     ): Long {
+
+        System.out.println("comment updated!")
         return commentService.updateComment(commentId, commentUpdateRequest.toDto())
     }
 
